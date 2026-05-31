@@ -45,11 +45,20 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: $main-text-page;
+
+    display: none;
+
+    @include on-desktop {
+      display: block;
+      transition: all $effectDuration;
+    }
   }
 
-  &--show-number:hover &__number {
-    opacity: 1;
-    transform: translateY(-50%) translateX(-20px);
+  @include on-desktop {
+    &--show-number:hover &__number {
+      opacity: 1;
+      transform: translateY(-50%) translateX(-20px);
+    }
   }
 }
 
